@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c1db3e904a.js" crossorigin="anonymous"></script>
     <title>Marília Sousa</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,11 +13,13 @@
         <div class="container">
             <nav>
                 <img src="foto_2.png" class="logo">
-                <ul>
-                    <li><a href="#">Quem sou</a></li>
-                    <li><a href="#">Experiência</a></li>
-                    <li><a href="#">Contato</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#about">Quem sou</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <i class="fa-solid fa-xmark" id="icon" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-regular fa-rectangle-list" id="icon" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Estudante de Psicologia</p>
@@ -24,7 +27,7 @@
         </div>
     </div>
     <!--------------------Sobre Mim-------------------->
-    <div if="about">
+    <div id="about">
         <div class= "container">
             <div class="row">
                 <div class="coluna-1">
@@ -67,6 +70,65 @@
             </div>
         </div>
     </div>
+    <!--------------------Experiência-------------------->
+    <div id="experiencia">
+        <div class="container">
+            <h1 class="titulo_sobre_mim">Experiência</h1>
+            <div class="lista_trabalhos">
+                <div class="trabalho">
+                    <img src="foto_4.jpg">
+                    <div class="layer">
+                        <h3>Liderança</h3>
+                        <p>Fui Diretora de Marketing da Liga de Psicanálise e Diretora Cultural do Centro Acadêmico de Psicologia. Em 2024, tive a oportunidade de ser monitora da disciplina de Psicologia Social, aprofundando meu envolvimento com o ensino e a aprendizagem. Fui também presidente da Liga Academica de Neurociências e Comportamento, onde desenvolvi e organizei o primeiro Simpósio de Saúde Mental da universidade. </p>
+                        <a href="#"><i class="fa-regular fa-chess-queen"></i></a>
+                    </div>
+                </div>
+                <div class="trabalho">
+                    <img src="foto_5.jpg">
+                    <div class="layer">
+                        <h3>Inovação<output></output></h3>
+                        <p>Minha paixão pela pesquisa me levou a desenvolver duas iniciações científicas: uma sobre LGBTQIAPN+fobia na internet e outra sobre escrita terapêutica com cuidadoras de pacientes oncológicos. Além disso, tive a honra de organizar uma das mesas do Encontro dos Núcleos das Regionais da Associação Brasileira de Psicologia Social e contribuir com a ABRAPSO ABC ao longo de 2024.</p>
+                        <a href="#"><i class="fa-regular fa-bell"></i></a>
+                    </div>
+                </div>
+                <div class="trabalho">
+                    <img src="foto_6.jpg">
+                    <div class="layer">
+                        <h3>Social<output></output></h3>
+                        <p>Buscando impactar a sociedade de maneira prática, co-fundei o projeto de empreendedorismo social Psicologia Integra, que visa promover maior acessibilidade e integração na área da Psicologia. Meu objetivo é seguir explorando o poder da escrita, da escuta e do conhecimento para transformar realidades.</p>
+                        <a href="#"><i class="fa-regular fa-handshake"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------Contato-------------------->
+    <div id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="contato_esquerdo">
+                    <h1>Meus contatos</h1>
+                    <p><i class="fa-regular fa-envelope"></i> contatomariliagabrieladesousa@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +55 11 95955-2504</p>
+                    <div class="icones_contato">
+                        <a href="https://www.instagram.com/marilianamente?igsh=MW9kaWpnbDduYTQxMg=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/marilia-sousa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <a href="marilia_sousa_curriculo.pdf" download class="btn">Currículo em PDF</a>
+                </div>
+                <div class="contato_direito">
+                    <form>
+                        <input type="text" name="Nome" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" id="Seu E-mail" required>
+                        <textarea name="mensagem" row="7" placeholder="Digite sua mensagem"></textarea>
+                        <button type="submit" class="btn" id="envio">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -79,6 +141,15 @@
             }
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
         }
     </script>
 

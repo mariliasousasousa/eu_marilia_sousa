@@ -4,7 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color: #fff;
@@ -124,3 +126,189 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+/*-------------------Experiência-------------------*/
+#experiencia{
+    padding: 50px 0;
+}
+.lista_trabalhos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.trabalho{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.trabalho img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(125, 64, 21, 0.858),#ff8f10);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 50%;
+    color:#d47202;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 60px;
+    background: #fff;    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center; 
+}
+.trabalho:hover img{
+    transform: scale(1.1);
+}
+.trabalho:hover .layer{
+    height: 100%;
+}
+/*-------------------Contato-------------------*/
+.contato_esquerdo{
+    flex-basis: 35%;
+}
+.contato_direito{
+    flex-basis: 60%;
+}
+.contato_esquerdo p{
+    margin-top: 30px;
+}
+.contato_esquerdo p i{
+    color:#d47202;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.icones_contato{
+    margin-top: 30px;
+}
+.icones_contato a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#f3cea4;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.icones_contato a:hover{
+    color:#d47202;
+    transform: translateY(-5px);
+}
+.btn{
+    display: block;
+    margin: 50px 5px;
+    width: fit-content;
+    border: 1px solid #c06600;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+#envio{
+    background: #060606;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background:#d47202;
+}
+#envio:hover{
+    background:#d47202;
+    cursor: pointer;
+}
+.contato_direito form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+/*-------------------CSS para telas de celular-------------------*/
+nav #icon{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav #icon{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff8f10;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul #icon{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .titulo_sobre_mim{
+        font-size: 40px;
+    }
+    .coluna-1, .coluna-2{
+        flex-basis: 100%;
+    }
+    .coluna-1{
+        margin-bottom: 30px;
+    }
+    .coluna-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contato_esquerdo, .contato_direito{
+        flex-basis:100%;
+    }
+}
+
