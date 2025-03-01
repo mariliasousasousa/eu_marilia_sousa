@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marília Sousa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="foto_2.png" class="logo">
+                <ul>
+                    <li><a href="#">Quem sou</a></li>
+                    <li><a href="#">Experiência</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Estudante de Psicologia</p>
+            </div>
+        </div>
+    </div>
+    <!--------------------Sobre Mim-------------------->
+    <div if="about">
+        <div class= "container">
+            <div class="row">
+                <div class="coluna-1">
+                    <img src="foto_3.jpg">
+                </div>
+                <div class="coluna-2">
+                    <h1 class="titulo_sobre_mim"> Quem sou</h1>
+                    <p>Apaixonada por literatura e história, encontrei na Psicologia um caminho para unir conhecimento e transformação. Atualmente, sou estudante do 7º semestre, com domínio em inglês, francês e espanhol. Minha trajetória acadêmica inclui formações em Acompanhamento Terapêutico e ABA, além de uma forte atuação em projetos e pesquisa.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('Educação')">Educação</p>
+                        <p class="tab-links" onclick="opentab('Experiência')">Experiência</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Habilidades">
+                        <ul>
+                            <li><span>Inglês</span><br>Avançado</li>
+                            <li><span>Espanhol</span><br>Intermediário</li>
+                            <li><span>Pacote Office</span><br>Avançado</li>
+                            <li><span>Gestão de Projetos</span><br>Avançado</li>
+                            <li><span>Organização de Eventos</span><br>Intermediário</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Educação">
+                        <ul>
+                            <li><span>Ensino Médio</span><br>Escola São José (2018-2020)</li>
+                            <li><span>Graduação</span><br>Psicologia USCS (2021 - Presente)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experiência">
+                        <ul>
+                            <li><span>Liga de Psicanálise</span><br>Diretora de Marketing (2022)</li>
+                            <li><span>Centro Acadêmico de Psicologia</span><br>Diretora Cultural (2021-2022)</li>
+                            <li><span>Liga Acadêmica de Neurociências e Comportamento (LANECO)</span><br>Presidente (2023-2024)</li>
+                            <li><span>Iniciações Científicas</span><br>Duas iniciações científicas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+
+</body>
+</html>
