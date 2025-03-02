@@ -27,7 +27,6 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .logo{
     width: 540px;
 }
@@ -263,8 +262,11 @@ nav #icon{
         margin-top: 100%;
         font-size: 16px;
     }
-    .header-text h1{
-        font-size: 30px;
+    .logo{
+        width: 240px;
+    }
+    .header-text{
+        font-size: 20px;
     }
     nav #icon{
         display: block;
