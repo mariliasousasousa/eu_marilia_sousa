@@ -80,6 +80,18 @@ body {
     .swiper {
       height: 1000 px;
     }
+    main {
+        position: relative;
+        max-width: 70%;
+        max-height: 1000px;
+        margin: 40px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: #ebd5c5;
+        padding: 20px;
+        justify-items: center;
+  }
   }
 
   .project-img {
