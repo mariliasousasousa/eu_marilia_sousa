@@ -78,7 +78,7 @@ body {
   
   @media (max-width: 450px) {
     .swiper {
-      height: 1000 px;
+      min-height: 100vh;
     }
     main {
         position: relative;
